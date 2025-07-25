@@ -73,7 +73,7 @@ npm run start
 
 ## Contributing
 
-Pull requests and suggestions are welcome! For major changes, please open an issue first.
+- Pull requests and suggestions are welcome! For major changes, please open an issue first.
 ---
 
 Built and maintained by [Emanuel Lázaro](https://github.com/emanuellcs).
