@@ -1,46 +1,46 @@
-import { Code, Globe, Server, Brain, Shield, Cloud } from "lucide-react"
+import { Code, Layout, Server, Brain, Cloud, Database } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Programming Languages",
+    title: "Languages",
     icon: Code,
     skills: [
-      { name: "Rust", icon: "🦀" },
-      { name: "Python", icon: "🐍" },
-      { name: "C/C++", icon: "⚙️" },
       { name: "TypeScript", icon: "📘" },
       { name: "JavaScript", icon: "⚡" },
-      { name: "Java", icon: "☕" },
-      { name: "Go", icon: "🔷" },
+      { name: "Go", icon: "🐹" },
+      { name: "Python", icon: "🐍" },
       { name: "C#", icon: "💜" },
+      { name: "C++", icon: "⚙️" },
+      { name: "Rust", icon: "🦀" },
+      { name: "Java", icon: "☕" },
     ],
   },
   {
-    title: "AI & Machine Learning",
-    icon: Brain,
+    title: "Backend Development",
+    icon: Server,
     skills: [
-      { name: "PyTorch", icon: "🔥" },
-      { name: "TensorFlow", icon: "🧠" },
-      { name: "Hugging Face", icon: "🤗" },
-      { name: "Scikit-learn", icon: "📊" },
-      { name: "OpenCV", icon: "👁️" },
-      { name: "Pandas", icon: "🐼" },
-      { name: "NLP", icon: "💬" },
-      { name: "Computer Vision", icon: "📷" },
+      { name: "Node.js", icon: "🟢" },
+      { name: "NestJS", icon: "🦁" },
+      { name: "Go Gin/Fiber", icon: "🚀" },
+      { name: "FastAPI", icon: "⚡" },
+      { name: ".NET Core", icon: "🟣" },
+      { name: "Spring Boot", icon: "🍃" },
+      { name: "GraphQL", icon: "◈" },
+      { name: "Express", icon: "🚂" },
     ],
   },
   {
-    title: "Web Development",
-    icon: Globe,
+    title: "Frontend Development",
+    icon: Layout,
     skills: [
       { name: "React", icon: "⚛️" },
       { name: "Next.js", icon: "▲" },
-      { name: "Angular", icon: "🅰️" },
       { name: "Vue.js", icon: "💚" },
-      { name: "Node.js", icon: "🟢" },
-      { name: "Django", icon: "🎯" },
-      { name: "Flask", icon: "🌶️" },
-      { name: "Spring Boot", icon: "🍃" },
+      { name: "Angular", icon: "🅰️" },
+      { name: "Tailwind", icon: "🌊" },
+      { name: "Vite", icon: "⚡" },
+      { name: "HTML5", icon: "🌐" },
+      { name: "CSS3", icon: "🎨" },
     ],
   },
   {
@@ -48,37 +48,41 @@ const skillCategories = [
     icon: Cloud,
     skills: [
       { name: "AWS", icon: "☁️" },
-      { name: "GCP", icon: "🌐" },
-      { name: "Azure", icon: "🔵" },
+      { name: "Azure", icon: "🟦" },
+      { name: "GCP", icon: "🌈" },
       { name: "Docker", icon: "🐳" },
       { name: "Kubernetes", icon: "⚓" },
+      { name: "Terraform", icon: "🏗️" },
       { name: "CI/CD", icon: "🔄" },
-      { name: "Git", icon: "📝" },
-      { name: "Firebase", icon: "🔥" },
+      { name: "Nginx", icon: "🚦" },
     ],
   },
   {
-    title: "Databases",
-    icon: Server,
+    title: "AI & Data Science",
+    icon: Brain,
+    skills: [
+      { name: "PyTorch", icon: "🔥" },
+      { name: "TensorFlow", icon: "🧠" },
+      { name: "Hugging Face", icon: "🤗" },
+      { name: "Scikit-learn", icon: "📊" },
+      { name: "Pandas", icon: "🐼" },
+      { name: "NumPy", icon: "🔢" },
+      { name: "LLMs", icon: "🤖" },
+      { name: "MLOps", icon: "⚙️" },
+    ],
+  },
+  {
+    title: "Databases & Tools",
+    icon: Database,
     skills: [
       { name: "PostgreSQL", icon: "🐘" },
-      { name: "MySQL", icon: "🗄️" },
       { name: "MongoDB", icon: "🍃" },
-      { name: "SQLite", icon: "💾" },
       { name: "Redis", icon: "🔴" },
-      { name: "SQL", icon: "📊" },
-    ],
-  },
-  {
-    title: "Security & Systems",
-    icon: Shield,
-    skills: [
-      { name: "Assembly", icon: "⚡" },
-      { name: "Linux Admin", icon: "🐧" },
-      { name: "Vulnerability Analysis", icon: "🔍" },
-      { name: "System Security", icon: "🛡️" },
-      { name: "NASM/MASM", icon: "🔧" },
-      { name: "Low-level Programming", icon: "⚙️" },
+      { name: "Git", icon: "📝" },
+      { name: "Linux (Arch)", icon: "🐧" },
+      { name: "VS Code", icon: "💻" },
+      { name: "Postman", icon: "🚀" },
+      { name: "Vim", icon: "⌨️" },
     ],
   },
 ]
@@ -89,12 +93,12 @@ export function Skills() {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Technical <span className="gradient-text">Skills</span>
+            Technical <span className="gradient-text">Stack</span>
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full" />
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            My comprehensive technology stack spans multiple domains, from low-level systems programming to advanced
-            AI/ML solutions.
+            I build scalable systems using a modern, polyglot technology stack, ranging from high-performance 
+            backend services to intuitive frontend interfaces and advanced AI models.
           </p>
         </div>
 

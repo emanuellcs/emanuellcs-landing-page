@@ -4,10 +4,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const education = [
   {
     degree: "Bachelor's Degree",
+    field: "Computer Science",
+    institution: "Uninter",
+    period: "November 2025 - November 2029",
+    location: "Brazil",
+    status: "Enrolled",
+    type: "Bachelor's Degree",
+  },
+  {
+    degree: "Bachelor's Degree",
     field: "Software Engineering",
     institution: "Estácio",
     period: "January 2025 - January 2029",
-    location: "Brasil",
+    location: "Brazil",
     status: "In Progress",
     type: "Bachelor's Degree",
   },
@@ -16,7 +25,7 @@ const education = [
     field: "Software Engineer",
     institution: "Escola DNC",
     period: "April 2025 - November 2025",
-    location: "Brasil",
+    location: "Brazil",
     status: "In Progress",
     type: "Professional Course",
   },
@@ -25,7 +34,7 @@ const education = [
     field: "Systems Development",
     institution: "EEEP Professora Maria de Jesus Rodrigues Alves",
     period: "January 2022 - December 2024",
-    location: "Brasil",
+    location: "Brazil",
     status: "Completed",
     type: "Technical Degree",
   },
@@ -36,10 +45,10 @@ const certifications = [
   "AWS CloudFormation",
   "Amazon Web Services",
   "Jornada de Orientação de Carreira",
-  "5G Basics: What it's all about (Portuguese)",
-  "HCIA-5G V2.0 Course (Portuguese)",
-  "React",
-  "Introdução ao Desenvolvimento Web",
+  "5G Basics: What it's all about",
+  "HCIA-5G V2.0 Course",
+  "React Development",
+  "Introduction to Web Development",
 ]
 
 export function Education() {

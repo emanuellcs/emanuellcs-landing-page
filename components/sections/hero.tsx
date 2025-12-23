@@ -3,29 +3,16 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, ArrowRight } from "lucide-react"
+import { Github, Linkedin, Mail, ArrowRight, Gitlab, Brain } from "lucide-react"
 
 const typingStrings = [
-  "Software Engineering Student.",
-  "Full Stack Developer.",
-  "Open Source Contributor.",
-  "Cloud Solutions Architect.",
-  "AI/ML Engineer.",
-  "DevOps Enthusiast.",
-  "Security-focused Developer.",
-  "Rust Developer.",
-  "Python Specialist.",
-  "Multi-language Programmer.",
-  "KDE Contributor.",
-  "Systems Programming Expert.",
-  "Machine Learning Researcher.",
-  "Web Development Specialist.",
-  "Database Architecture Designer.",
-  "Cybersecurity Analyst.",
-  "Algorithm Optimization Expert.",
-  "Microservices Architect.",
-  "API Development Specialist.",
-  "Performance Optimization Engineer.",
+  "Full Stack Software Engineer.",
+  "SE & CS Student.",
+  "Building Scalable Systems.",
+  "Cloud Native Architecture.",
+  "AI/ML Enthusiast.",
+  "Game Engine Developer.",
+  "Node.js | Go | Python | Rust.",
 ]
 
 const socialLinks = [
@@ -34,18 +21,35 @@ const socialLinks = [
     href: "https://github.com/emanuellcs",
     icon: Github,
     label: "Visit Emanuel's GitHub profile",
+    hoverColor: "hover:text-gray-400",
+  },
+  {
+    name: "GitLab",
+    href: "https://gitlab.com/emanuellcs",
+    icon: Gitlab,
+    label: "Visit Emanuel's GitLab profile",
+    hoverColor: "hover:text-orange-500",
+  },
+  {
+    name: "Hugging Face",
+    href: "https://huggingface.co/emanuellcs",
+    icon: Brain,
+    label: "Visit Emanuel's Hugging Face profile",
+    hoverColor: "hover:text-yellow-400",
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/emanuellcs",
     icon: Linkedin,
     label: "Connect with Emanuel on LinkedIn",
+    hoverColor: "hover:text-blue-500",
   },
   {
     name: "Email",
     href: "mailto:emanuellzr01@outlook.com",
     icon: Mail,
     label: "Send Emanuel an email",
+    hoverColor: "hover:text-teal-400",
   },
 ]
 
@@ -97,6 +101,7 @@ export function Hero() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Hi! I'm <span className="gradient-text">Emanuel Lázaro</span>.
               </h1>
+              
               <div className="text-xl sm:text-2xl lg:text-3xl text-gray-300 min-h-[2.5rem] lg:min-h-[3rem]">
                 A{" "}
                 <span className="text-teal-400 font-medium">
@@ -104,8 +109,13 @@ export function Hero() {
                   <span className="animate-pulse">|</span>
                 </span>
               </div>
+
+              <p className="text-lg text-gray-400 italic">
+                "Code that scales, maintains, and delivers value"
+              </p>
+
               <p className="text-base sm:text-lg text-gray-500 flex items-center justify-center gap-2">
-                <span>📍</span> Mucambo, Ceará, Brasil
+                <span>📍</span> Mucambo, Brazil 🇧🇷
               </p>
             </div>
 
@@ -115,7 +125,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <div className="flex space-x-6 justify-center pt-4">
+            <div className="flex flex-wrap gap-4 justify-center pt-4">
               {socialLinks.map((link) => {
                 const Icon = link.icon
                 return (
@@ -124,7 +134,7 @@ export function Hero() {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="p-3 text-gray-400 hover:text-teal-400 transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-full"
+                    className={`p-3 text-gray-400 ${link.hoverColor} transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-full`}
                     aria-label={link.label}
                   >
                     <Icon size={24} />

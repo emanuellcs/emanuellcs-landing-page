@@ -3,26 +3,25 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const experiences = [
   {
-    title: "Volunteer Developer",
-    company: "KDE",
-    location: "Mucambo, Ceará, Brasil",
-    period: "June 2025 - Present",
-    duration: "2 months",
-    type: "Volunteer",
-    description: "Contributing as a volunteer developer to the KDE open-source community.",
+    title: "Full Stack Software Engineer",
+    company: "Freelance / Self-Employed",
+    location: "Mucambo, Ceará, Brazil (Remote)",
+    period: "May 2019 - Present",
+    duration: "5+ years",
+    type: "Freelance",
+    description: "Designing and developing scalable full-stack solutions, focusing on cloud-native architectures, microservices, and high-performance systems.",
     achievements: [
-      "Learning and applying C++, Qt, and Git through real contributions",
-      "Working on 'good first issues', including minor bug fixes and UI/UX improvements",
-      "Collaborating with experienced developers in code reviews and discussions",
-      "Participating in a global open-source project used by millions of users",
-      "Gaining practical experience with open-source workflows, CI/CD pipelines, and version control",
+      "Architecting and building RESTful & GraphQL APIs using Node.js, Go, and Python",
+      "Deploying microservices to multi-cloud environments (AWS, Azure, GCP) using Docker and Kubernetes",
+      "Developing responsive cross-platform applications with React, Vue, React Native, and Electron",
+      "Implementing secure authentication systems and optimizing database performance (SQL & NoSQL)",
+      "Integrating AI/ML models (PyTorch/TensorFlow) into production web applications",
     ],
-    note: "This is a self-initiated and unpaid role, focused on learning and contributing to free software.",
   },
   {
     title: "Intern",
     company: "Arte Gráfica",
-    location: "Mucambo, Ceará, Brasil",
+    location: "Mucambo, Ceará, Brazil",
     period: "August 2024 - December 2024",
     duration: "5 months",
     type: "Internship",
@@ -86,12 +85,6 @@ export function Experience() {
                     ))}
                   </ul>
                 </div>
-
-                {exp.note && (
-                  <div className="mt-4 p-3 bg-teal-400/5 border border-teal-400/20 rounded-lg">
-                    <p className="text-sm text-teal-300 italic">{exp.note}</p>
-                  </div>
-                )}
               </CardContent>
             </Card>
           ))}

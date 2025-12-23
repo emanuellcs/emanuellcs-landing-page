@@ -64,7 +64,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        mono: ["var(--font-jetbrains-mono)", "monospace"],
+        mono: ["var(--font-fira-code)", "monospace"],
       },
       spacing: {
         "18": "4.5rem",
