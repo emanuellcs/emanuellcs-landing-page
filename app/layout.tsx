@@ -1,15 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { JetBrains_Mono } from "next/font/google"
+import { Fira_Code } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { ScrollToTop } from "@/components/ui/scroll-to-top"
 import { ParticleBackground } from "@/components/ui/particle-background"
 
-const jetbrainsMono = JetBrains_Mono({
+const firaCode = Fira_Code({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  variable: "--font-fira-code",
   display: "swap",
 })
 
@@ -57,7 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${jetbrainsMono.variable} font-mono bg-gray-900 text-gray-100 antialiased`}>
+      <body className={`${firaCode.variable} font-mono bg-gray-900 text-gray-100 antialiased`}>
         <ParticleBackground />
         <Header />
         {children}

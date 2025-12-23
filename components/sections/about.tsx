@@ -1,35 +1,35 @@
-import { Code, Cloud, Brain, Shield, Cpu, Globe } from "lucide-react"
+import { Code, Server, Cloud, Database, Brain, Gamepad2 } from "lucide-react"
 
 const highlights = [
   {
     icon: Code,
-    title: "Full Stack Development",
-    description: "End-to-end web applications with modern technologies",
+    title: "Cross-Platform Dev",
+    description: "React, Vue, Angular, React Native, and Electron apps",
+  },
+  {
+    icon: Server,
+    title: "API & Microservices",
+    description: "RESTful & GraphQL architectures with async patterns",
   },
   {
     icon: Cloud,
-    title: "Cloud Solutions",
-    description: "AWS, GCP, and Azure cloud architecture",
+    title: "Cloud Native",
+    description: "AWS, Azure, GCP deployments with Docker & K8s",
+  },
+  {
+    icon: Database,
+    title: "Database Architecture",
+    description: "Scalable SQL and NoSQL database solutions",
   },
   {
     icon: Brain,
-    title: "AI/ML Engineering",
-    description: "PyTorch, TensorFlow, and multimodal AI systems",
+    title: "AI/ML Systems",
+    description: "PyTorch, TensorFlow, and LLM integration",
   },
   {
-    icon: Shield,
-    title: "Security & DevOps",
-    description: "Vulnerability analysis and secure system design",
-  },
-  {
-    icon: Cpu,
-    title: "Low-Level Programming",
-    description: "Rust, C/C++, and system-level development",
-  },
-  {
-    icon: Globe,
-    title: "Open Source",
-    description: "Active contributor to KDE and other projects",
+    icon: Gamepad2,
+    title: "Game Engine Dev",
+    description: "C++, C#, Rust, Physics, and Math optimization",
   },
 ]
 
@@ -54,23 +54,22 @@ export function About() {
           <div className="space-y-8">
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
               <p>
-                Dynamic and motivated Full-Stack Developer with a technology journey that began in May 2019. I
-                specialize in creating robust and scalable digital solutions, from practical web applications and APIs
-                to advanced AI system architectures.
+                I am a Full Stack Software Engineer and a double-degree student in <strong>Software Engineering & Computer Science</strong>, 
+                based in Mucambo, Brazil. My development philosophy centers on creating code that scales, maintains, and delivers real value.
               </p>
               <p>
-                My commitment is to develop high-impact solutions, integrating Artificial Intelligence, optimizing
-                algorithms, and ensuring software quality. I'm fascinated by the potential of multimodal AI and seek to
-                contribute to tools that enhance security governance and quality.
+                My primary focus lies in <strong>Full Stack Development</strong> and <strong>Cloud-Native Architecture</strong>. 
+                I specialize in building scalable web applications, exploring microservices architectures, and deploying robust systems 
+                to multi-cloud environments using modern orchestration tools.
               </p>
               <p>
-                Currently working as a Freelance Full-Stack Developer, facing diverse and complex challenges in AI/ML.
-                I'm focused on designing architectures and developing innovative Multimodal AI systems, passionate about
-                creating effective Security Tools and promoting best practices.
+                Beyond standard application development, I use <strong>Game Development</strong> as a multidisciplinary laboratory. 
+                In my spare time, I create engines and games using <strong>C++, C#, and Rust</strong>. This hobby consolidates my 
+                Computer Science fundamentals by combining physics, mathematics, logic, and optimization into complex engineering projects.
               </p>
               <p>
-                As an enthusiast and contributor to open-source projects, I actively contribute to the KDE community,
-                working with C++, Qt, and participating in global projects used by millions of users.
+                I am currently open to <strong>Internships</strong> and <strong>Junior Engineering</strong> roles where I can apply my skills 
+                in backend engineering, DevOps, and AI/ML to build tomorrow's solutions with today's code.
               </p>
             </div>
 

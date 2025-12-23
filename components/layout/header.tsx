@@ -145,7 +145,7 @@ export function Header() {
               }}
               aria-label="Emanuel Lázaro - Go to top"
             >
-              {"<"}Emanuel Lázaro{" />"}
+              {"<"}emanuellcs{" />"}
             </Link>
 
             {/* Desktop Navigation */}
@@ -154,7 +154,9 @@ export function Header() {
                 {navigation.map((item, index) => (
                   <Link
                     key={item.name}
-                    ref={(el) => (navRefs.current[index] = el)}
+                    ref={(el) => {
+                      navRefs.current[index] = el
+                    }}
                     href={item.href}
                     onClick={(e) => {
                       e.preventDefault()
