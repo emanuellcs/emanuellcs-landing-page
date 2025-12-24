@@ -14,27 +14,42 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: "Emanuel Lázaro - Software Developer",
+  title: "Emanuel Lázaro - Full Stack Software Engineer",
   description:
-    "Full stack developer and Software Engineering student passionate about creating innovative, user-friendly digital solutions.",
-  keywords: ["software developer", "full stack", "web development", "react", "next.js", "python", "machine learning"],
+    "Full Stack Software Engineer and Double Degree student in SE & CS. Passionate about building scalable cloud-native architectures and AI/ML solutions.",
+  keywords: [
+    "software engineer",
+    "computer science student",
+    "full stack",
+    "cloud native",
+    "distributed systems",
+    "microservices",
+    "typescript",
+    "go",
+    "python",
+    "react",
+    "next.js",
+    "dotnet",
+    "kubernetes",
+    "machine learning"
+  ],
   authors: [{ name: "Emanuel Lázaro" }],
   creator: "Emanuel Lázaro",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://emanuellazaro.dev",
-    title: "Emanuel Lázaro - Software Developer",
+    url: "https://emanuellcs.vercel.app",
+    title: "Emanuel Lázaro - Full Stack Software Engineer",
     description:
-      "Full stack developer and Software Engineering student passionate about creating innovative, user-friendly digital solutions.",
-    siteName: "Emanuel Lázaro Portfolio",
+      "Full Stack Software Engineer and Double Degree student in SE & CS. Passionate about building scalable cloud-native architectures and AI/ML solutions.",
+    siteName: "Emanuel Lázaro's Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emanuel Lázaro - Software Developer",
+    title: "Emanuel Lázaro - Full Stack Software Engineer",
     description:
-      "Full stack developer and Software Engineering student passionate about creating innovative, user-friendly digital solutions.",
-    creator: "@emanuellcs01",
+      "Full Stack Software Engineer and Double Degree student in SE & CS. Passionate about building scalable cloud-native architectures and AI/ML solutions.",
+    creator: "@emanuellcs",
   },
   robots: {
     index: true,
@@ -47,7 +62,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
