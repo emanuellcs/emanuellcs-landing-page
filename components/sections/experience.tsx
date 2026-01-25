@@ -1,21 +1,35 @@
-import { Calendar, MapPin } from "lucide-react"
+import { Calendar, MapPin, Trophy } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const experiences = [
   {
+    title: "Machine Learning & Data Science Competitor",
+    company: "Kaggle",
+    location: "Remote / Global",
+    period: "January 2025 - Present",
+    duration: "Ongoing",
+    type: "Competition & Research",
+    description: "Participating in global data science competitions to benchmark models, refine feature engineering, and stress-test applied ML workflows.",
+    achievements: [
+      "Training Deep Learning models using PyTorch and TensorFlow for Computer Vision and NLP tasks",
+      "Implementing advanced feature engineering and large-scale data processing pipelines",
+      "Applying mathematical optimization and regularization techniques to improve model generalization",
+      "Collaborating with the community to study SOTA architectures and modern training techniques",
+    ],
+  },
+  {
     title: "Full Stack Software Engineer",
     company: "Freelance / Self-Employed",
-    location: "Mucambo, Ceará, Brazil (Remote)",
-    period: "May 2019 - Present",
-    duration: "5+ years",
+    location: "Mucambo, Brazil (Remote)",
+    period: "Jan 2022 - Present",
+    duration: "4+ years",
     type: "Freelance",
-    description: "Designing and developing scalable full-stack solutions, focusing on cloud-native architectures, microservices, and high-performance systems.",
+    description: "Delivering production-grade full stack solutions with a focus on performance, security, and maintainability using Clean Architecture.",
     achievements: [
-      "Architecting and building RESTful & GraphQL APIs using Node.js, Go, and Python",
-      "Deploying microservices to multi-cloud environments (AWS, Azure, GCP) using Docker and Kubernetes",
-      "Developing responsive cross-platform applications with React, Vue, React Native, and Electron",
-      "Implementing secure authentication systems and optimizing database performance (SQL & NoSQL)",
-      "Integrating AI/ML models (PyTorch/TensorFlow) into production web applications",
+      "Architecting RESTful & GraphQL APIs using Node.js (NestJS) and Go",
+      "Deploying microservices to AWS and multi-cloud environments using Docker and Kubernetes",
+      "Building responsive frontend interfaces with React, Next.js, and Tailwind CSS",
+      "Optimizing database performance for PostgreSQL and MongoDB including query indexing and caching",
     ],
   },
   {
@@ -25,12 +39,11 @@ const experiences = [
     period: "August 2024 - December 2024",
     duration: "5 months",
     type: "Internship",
-    description: "Gained practical experience in graphic design and digital media production.",
+    description: "Gained practical experience in visual communication and digital media production.",
     achievements: [
       "Developed skills in graphic design and visual communication",
-      "Worked with design software and digital media tools",
-      "Collaborated on various design projects and client deliverables",
-      "Applied technical knowledge in a professional environment",
+      "Collaborated on design projects and client deliverables",
+      "Applied technical knowledge in a professional team environment",
     ],
   },
 ]
@@ -75,7 +88,7 @@ export function Experience() {
                 <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-teal-400 text-sm">Key Achievements & Responsibilities:</h4>
+                  <h4 className="font-semibold text-teal-400 text-sm">Key Responsibilities & Tech:</h4>
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start text-sm text-gray-300">

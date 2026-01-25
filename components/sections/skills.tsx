@@ -7,26 +7,21 @@ const skillCategories = [
     skills: [
       { name: "TypeScript", icon: "📘" },
       { name: "JavaScript", icon: "⚡" },
-      { name: "Go", icon: "🐹" },
       { name: "Python", icon: "🐍" },
-      { name: "C#", icon: "💜" },
-      { name: "C++", icon: "⚙️" },
-      { name: "Rust", icon: "🦀" },
-      { name: "Java", icon: "☕" },
+      { name: "Go", icon: "🐹" },
+      { name: "SQL", icon: "💾" },
     ],
   },
   {
-    title: "Backend Development",
+    title: "Backend & APIs",
     icon: Server,
     skills: [
       { name: "Node.js", icon: "🟢" },
       { name: "NestJS", icon: "🦁" },
-      { name: "Go Gin/Fiber", icon: "🚀" },
+      { name: "Express.js", icon: "🚂" },
       { name: "FastAPI", icon: "⚡" },
-      { name: ".NET Core", icon: "🟣" },
-      { name: "Spring Boot", icon: "🍃" },
+      { name: "Go Gin", icon: "🍸" },
       { name: "GraphQL", icon: "◈" },
-      { name: "Express", icon: "🚂" },
     ],
   },
   {
@@ -35,12 +30,10 @@ const skillCategories = [
     skills: [
       { name: "React", icon: "⚛️" },
       { name: "Next.js", icon: "▲" },
-      { name: "Vue.js", icon: "💚" },
-      { name: "Angular", icon: "🅰️" },
-      { name: "Tailwind", icon: "🌊" },
-      { name: "Vite", icon: "⚡" },
+      { name: "Tailwind CSS", icon: "🌊" },
       { name: "HTML5", icon: "🌐" },
       { name: "CSS3", icon: "🎨" },
+      { name: "Vite", icon: "⚡" },
     ],
   },
   {
@@ -48,17 +41,17 @@ const skillCategories = [
     icon: Cloud,
     skills: [
       { name: "AWS", icon: "☁️" },
-      { name: "Azure", icon: "🟦" },
-      { name: "GCP", icon: "🌈" },
       { name: "Docker", icon: "🐳" },
       { name: "Kubernetes", icon: "⚓" },
-      { name: "Terraform", icon: "🏗️" },
       { name: "CI/CD", icon: "🔄" },
-      { name: "Nginx", icon: "🚦" },
+      { name: "Azure", icon: "🟦" },
+      { name: "Google Cloud", icon: "🌈" },
+      { name: "Lambda", icon: "⚡" },
+      { name: "CloudFormation", icon: "🏗️" },
     ],
   },
   {
-    title: "AI & Data Science",
+    title: "AI/ML & Data",
     icon: Brain,
     skills: [
       { name: "PyTorch", icon: "🔥" },
@@ -67,22 +60,17 @@ const skillCategories = [
       { name: "Scikit-learn", icon: "📊" },
       { name: "Pandas", icon: "🐼" },
       { name: "NumPy", icon: "🔢" },
-      { name: "LLMs", icon: "🤖" },
-      { name: "MLOps", icon: "⚙️" },
+      { name: "Kaggle", icon: "🏅" },
     ],
   },
   {
-    title: "Databases & Tools",
+    title: "Databases & Caching",
     icon: Database,
     skills: [
       { name: "PostgreSQL", icon: "🐘" },
+      { name: "MySQL", icon: "🐬" },
       { name: "MongoDB", icon: "🍃" },
       { name: "Redis", icon: "🔴" },
-      { name: "Git", icon: "📝" },
-      { name: "Linux (Arch)", icon: "🐧" },
-      { name: "VS Code", icon: "💻" },
-      { name: "Postman", icon: "🚀" },
-      { name: "Vim", icon: "⌨️" },
     ],
   },
 ]
@@ -97,8 +85,8 @@ export function Skills() {
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full" />
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            I build scalable systems using a modern, polyglot technology stack, ranging from high-performance 
-            backend services to intuitive frontend interfaces and advanced AI models.
+            My stack anchors on the <strong>TypeScript ecosystem</strong> (Node.js, React, Next.js, NestJS), 
+            supported by <strong>Python and Go</strong> for automation, data workflows, and concurrency-critical services.
           </p>
         </div>
 

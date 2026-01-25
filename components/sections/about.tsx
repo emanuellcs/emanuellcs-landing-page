@@ -1,35 +1,35 @@
-import { Code, Server, Cloud, Database, Brain, Gamepad2 } from "lucide-react"
+import { Code, Server, Cloud, Database, Brain, Layers } from "lucide-react"
 
 const highlights = [
   {
     icon: Code,
-    title: "Cross-Platform Dev",
-    description: "React, Vue, Angular, React Native, and Electron apps",
-  },
-  {
-    icon: Server,
-    title: "API & Microservices",
-    description: "RESTful & GraphQL architectures with async patterns",
+    title: "Full Stack Systems",
+    description: "React, Next.js, Node.js, and NestJS with production-grade ergonomics.",
   },
   {
     icon: Cloud,
-    title: "Cloud Native",
-    description: "AWS, Azure, GCP deployments with Docker & K8s",
-  },
-  {
-    icon: Database,
-    title: "Database Architecture",
-    description: "Scalable SQL and NoSQL database solutions",
+    title: "Cloud & DevOps",
+    description: "Docker, Kubernetes, CI/CD pipelines, and AWS cloud delivery.",
   },
   {
     icon: Brain,
-    title: "AI/ML Systems",
-    description: "PyTorch, TensorFlow, and LLM integration",
+    title: "AI/ML Integration",
+    description: "Deep Learning, Kaggle experimentation, and Python data workflows.",
   },
   {
-    icon: Gamepad2,
-    title: "Game Engine Dev",
-    description: "C++, C#, Rust, Physics, and Math optimization",
+    icon: Layers,
+    title: "Architecture & Design",
+    description: "Clean Architecture, Domain-Driven Design (DDD), and SOLID principles.",
+  },
+  {
+    icon: Server,
+    title: "Backend Engineering",
+    description: "REST/GraphQL APIs, microservices patterns, and high-concurrency systems.",
+  },
+  {
+    icon: Database,
+    title: "Data Strategy",
+    description: "Relational and NoSQL modeling, query optimization, and caching strategies.",
   },
 ]
 
@@ -54,22 +54,21 @@ export function About() {
           <div className="space-y-8">
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
               <p>
-                I am a Full Stack Software Engineer and a double-degree student in <strong>Software Engineering & Computer Science</strong>, 
-                based in Mucambo, Brazil. My development philosophy centers on creating code that scales, maintains, and delivers real value.
+                I am a <strong>Software Engineering & Computer Science student (2025–2029)</strong> focused on high-performance 
+                Full Stack development. I work with an engineering vision, combining modern interfaces with robust backends.
               </p>
               <p>
-                My primary focus lies in <strong>Full Stack Development</strong> and <strong>Cloud-Native Architecture</strong>. 
-                I specialize in building scalable web applications, exploring microservices architectures, and deploying robust systems 
-                to multi-cloud environments using modern orchestration tools.
+                My development philosophy is guided by <strong>Clean Architecture</strong>, <strong>Domain-Driven Design (DDD)</strong>, 
+                and <strong>SOLID</strong> principles. I strive to create code that scales, maintains, and delivers real value, 
+                ensuring production-grade ergonomics in every project.
               </p>
               <p>
-                Beyond standard application development, I use <strong>Game Development</strong> as a multidisciplinary laboratory. 
-                In my spare time, I create engines and games using <strong>C++, C#, and Rust</strong>. This hobby consolidates my 
-                Computer Science fundamentals by combining physics, mathematics, logic, and optimization into complex engineering projects.
+                My primary stack anchors on the <strong>TypeScript ecosystem</strong> (Node.js, React, Next.js, NestJS), while 
+                strategically utilizing <strong>Python and Go</strong> for automation, data workflows, and concurrency-critical services.
               </p>
               <p>
-                I am currently open to <strong>Internships</strong> and <strong>Junior Engineering</strong> roles where I can apply my skills 
-                in backend engineering, DevOps, and AI/ML to build tomorrow's solutions with today's code.
+                I am currently open to <strong>Internships</strong> and <strong>Junior Engineering</strong> roles where I can apply 
+                modern web development, cloud-native delivery, and applied AI/ML to real-world systems.
               </p>
             </div>
 

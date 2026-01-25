@@ -1,44 +1,56 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, Gitlab, Brain, ArrowRight, Layers, Cpu, Network } from "lucide-react"
+import { Github, Gitlab, Brain, ArrowRight, Server, Terminal, Cloud, BarChart } from "lucide-react"
 
 const platforms = [
   {
     title: "Open Source & Web",
     platform: "GitHub",
-    description: "My primary hub for full-stack applications, cloud-native systems, and developer tools. Home to my experiments with Node.js, Go, and microservices architecture.",
+    description: "My primary hub for production-grade applications. Home to my work with the TypeScript ecosystem (NestJS, Next.js) and Cloud/DevOps infrastructure.",
     icon: Github,
-    secondaryIcon: Network,
+    secondaryIcon: Cloud,
     href: "https://github.com/emanuellcs",
     color: "text-gray-200",
     hoverColor: "group-hover:text-white",
     bgColor: "bg-gray-800",
-    tags: ["Full Stack", "Cloud Native", "DevOps"],
+    tags: ["TypeScript", "Microservices", "AWS"],
   },
   {
-    title: "Game Engines & Systems",
+    title: "Systems & Low-Level",
     platform: "GitLab",
-    description: "A multidisciplinary laboratory for low-level engineering. Here I build game engines, physics simulations, and graphics renderers using C++, C#, and Rust.",
+    description: "A laboratory for high-performance engineering. Here I explore system design, concurrency patterns, and game engines using Go, C++, and Rust.",
     icon: Gitlab,
-    secondaryIcon: Cpu,
+    secondaryIcon: Terminal,
     href: "https://gitlab.com/emanuellcs",
     color: "text-orange-500",
     hoverColor: "group-hover:text-orange-400",
     bgColor: "bg-orange-900/20",
-    tags: ["C++", "Rust", "Game Dev"],
+    tags: ["Go", "C++", "System Design"],
   },
   {
     title: "AI & Machine Learning",
     platform: "Hugging Face",
-    description: "The repository for my research into artificial intelligence. Includes trained models, datasets, and experiments with PyTorch, TensorFlow, and LLMs.",
+    description: "The repository for my research into artificial intelligence. Includes trained models, datasets, and NLP experiments with PyTorch and TensorFlow.",
     icon: Brain,
-    secondaryIcon: Layers,
+    secondaryIcon: Server,
     href: "https://huggingface.co/emanuellcs",
     color: "text-yellow-400",
     hoverColor: "group-hover:text-yellow-300",
     bgColor: "bg-yellow-900/20",
-    tags: ["PyTorch", "TensorFlow", "MLOps"],
+    tags: ["PyTorch", "Deep Learning", "Models"],
+  },
+  {
+    title: "Data Science & Competitions",
+    platform: "Kaggle",
+    description: "My arena for benchmarking models and feature engineering. I participate in global competitions to stress-test applied ML workflows and data strategies.",
+    icon: BarChart,
+    secondaryIcon: Brain,
+    href: "https://www.kaggle.com/emanuellcs",
+    color: "text-blue-400",
+    hoverColor: "group-hover:text-blue-300",
+    bgColor: "bg-blue-900/20",
+    tags: ["Python", "Data Analysis", "Competitions"],
   },
 ]
 
@@ -52,12 +64,12 @@ export function Projects() {
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full mb-8" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I organize my development work across specialized platforms to maintain clean architecture and focus. 
-            Explore my code based on your area of interest.
+            I organize my development work across specialized platforms. 
+            Explore my code, models, and datasets based on your area of interest.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {platforms.map((item) => {
             const Icon = item.icon
             const SecondaryIcon = item.secondaryIcon

@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar, MapPin } from "lucide-react"
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const education = [
@@ -6,49 +6,48 @@ const education = [
     degree: "Bachelor's Degree",
     field: "Computer Science",
     institution: "Uninter",
-    period: "November 2025 - November 2029",
+    period: "Nov 2025 - Nov 2029",
     location: "Brazil",
     status: "Enrolled",
-    type: "Bachelor's Degree",
+    description: "Focus on Algorithms, Data Structures, and Mathematical Foundations.",
   },
   {
     degree: "Bachelor's Degree",
     field: "Software Engineering",
     institution: "Estácio",
-    period: "January 2025 - January 2029",
+    period: "Jan 2025 - Jan 2029",
     location: "Brazil",
     status: "In Progress",
-    type: "Bachelor's Degree",
+    description: "Focus on System Design, Software Architecture, and Engineering Practices.",
   },
   {
-    degree: "Formation Course",
+    degree: "Professional Formation",
     field: "Software Engineer",
     institution: "Escola DNC",
-    period: "April 2025 - November 2025",
-    location: "Brazil",
+    period: "Apr 2025 - Nov 2025",
+    location: "Remote",
     status: "In Progress",
-    type: "Professional Course",
+    description: "Intensive training in Full Stack Development and Career Acceleration.",
   },
   {
     degree: "Integrated Technical Course",
     field: "Systems Development",
     institution: "EEEP Professora Maria de Jesus Rodrigues Alves",
-    period: "January 2022 - December 2024",
-    location: "Brazil",
+    period: "Jan 2022 - Dec 2024",
+    location: "Ceará, Brazil",
     status: "Completed",
-    type: "Technical Degree",
+    description: "Foundation in programming logic, web development, and database management.",
   },
 ]
 
 const certifications = [
-  "AWS Lambda",
   "AWS CloudFormation",
-  "Amazon Web Services",
-  "Jornada de Orientação de Carreira",
-  "5G Basics: What it's all about",
-  "HCIA-5G V2.0 Course",
+  "AWS Lambda",
+  "Cloud-Native Architecture",
   "React Development",
-  "Introduction to Web Development",
+  "HCIA-5G V2.0",
+  "5G Basics",
+  "Career Orientation Journey",
 ]
 
 export function Education() {
@@ -60,6 +59,10 @@ export function Education() {
             Education & <span className="gradient-text">Certifications</span>
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full" />
+          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+             A continuous journey combining academic rigor in <strong>Computer Science & Software Engineering</strong> 
+             with practical, professional certification in cloud technologies.
+          </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -104,6 +107,9 @@ export function Education() {
                       </div>
                     </div>
                   </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-400 text-sm ml-16">{edu.description}</p>
+                  </CardContent>
                 </Card>
               ))}
             </div>
@@ -120,7 +126,7 @@ export function Education() {
                       key={index}
                       className="flex items-center p-3 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-teal-400/50 transition-all duration-300 hover:bg-teal-400/5"
                     >
-                      <div className="w-2 h-2 bg-teal-400 rounded-full mr-3 flex-shrink-0" />
+                      <Award size={16} className="text-teal-400 mr-3 flex-shrink-0" />
                       <span className="text-sm text-gray-300 font-medium">{cert}</span>
                     </div>
                   ))}

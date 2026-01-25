@@ -14,7 +14,7 @@ const contactMethods = [
   },
   {
     title: "LinkedIn",
-    description: "Connect for professional opportunities",
+    description: "Connect for opportunities",
     icon: Linkedin,
     href: "https://linkedin.com/in/emanuellcs",
     buttonText: "View Profile",
@@ -22,7 +22,7 @@ const contactMethods = [
   },
   {
     title: "Hugging Face",
-    description: "Follow my AI/ML models and datasets",
+    description: "Follow my AI/ML models",
     icon: Brain,
     href: "https://huggingface.co/emanuellcs",
     buttonText: "View Models",
@@ -30,7 +30,7 @@ const contactMethods = [
   },
   {
     title: "GitHub",
-    description: "Explore my code and contributions",
+    description: "Explore my code",
     icon: Github,
     href: "https://github.com/emanuellcs",
     buttonText: "Visit GitHub",
@@ -50,13 +50,12 @@ export function Contact() {
           
           <div className="max-w-3xl mx-auto space-y-4 text-gray-300 leading-relaxed">
             <p className="text-xl">
-              I am currently open to <strong>Internships</strong>, <strong>Junior Engineering</strong> roles, and 
-              <strong>Open Source Collaboration</strong> worldwide.
+              I am actively pursuing <strong>Internship</strong> and <strong>Junior Engineering</strong> roles 
+              where I can apply modern web development, cloud-native delivery, and AI/ML to production contexts.
             </p>
             <p>
-              Whether you want to discuss Cloud-Native Architecture, AI/ML pipelines, or Game Engine development 
-              (check my <Link href="https://gitlab.com/emanuellcs" className="text-teal-400 hover:underline">GitLab</Link> for that!), 
-              I'd love to hear from you.
+              Whether you want to discuss <strong>Clean Architecture</strong>, <strong>Kaggle Competitions</strong>, 
+              or <strong>Full Stack Systems</strong>, I'd love to hear from you.
             </p>
           </div>
         </div>

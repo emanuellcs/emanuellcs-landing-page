@@ -3,16 +3,15 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, ArrowRight, Gitlab, Brain } from "lucide-react"
+import { Github, Linkedin, Mail, ArrowRight, Gitlab, Brain, BarChart } from "lucide-react"
 
 const typingStrings = [
-  "Full Stack Software Engineer.",
-  "SE & CS Student.",
-  "Building Scalable Systems.",
-  "Cloud Native Architecture.",
-  "AI/ML Enthusiast.",
-  "Game Engine Developer.",
-  "Node.js | Go | Python | Rust.",
+  "Software Engineering Student.",
+  "Full Stack Developer.",
+  "TypeScript | Node.js | Next.js.",
+  "Python & Go | Cloud & DevOps.",
+  "Clean Architecture & DDD.",
+  "AI/ML & Data Science.",
 ]
 
 const socialLinks = [
@@ -24,11 +23,18 @@ const socialLinks = [
     hoverColor: "hover:text-gray-400",
   },
   {
-    name: "GitLab",
-    href: "https://gitlab.com/emanuellcs",
-    icon: Gitlab,
-    label: "Visit Emanuel's GitLab profile",
-    hoverColor: "hover:text-orange-500",
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/emanuellcs",
+    icon: Linkedin,
+    label: "Connect with Emanuel on LinkedIn",
+    hoverColor: "hover:text-blue-500",
+  },
+  {
+    name: "Kaggle",
+    href: "https://www.kaggle.com/emanuellcs",
+    icon: BarChart,
+    label: "Visit Emanuel's Kaggle profile",
+    hoverColor: "hover:text-blue-400",
   },
   {
     name: "Hugging Face",
@@ -38,11 +44,11 @@ const socialLinks = [
     hoverColor: "hover:text-yellow-400",
   },
   {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/emanuellcs",
-    icon: Linkedin,
-    label: "Connect with Emanuel on LinkedIn",
-    hoverColor: "hover:text-blue-500",
+    name: "GitLab",
+    href: "https://gitlab.com/emanuellcs",
+    icon: Gitlab,
+    label: "Visit Emanuel's GitLab profile",
+    hoverColor: "hover:text-orange-500",
   },
   {
     name: "Email",
@@ -110,8 +116,8 @@ export function Hero() {
                 </span>
               </div>
 
-              <p className="text-lg text-gray-400 italic">
-                "Code that scales, maintains, and delivers value"
+              <p className="text-lg text-gray-400 italic max-w-2xl mx-auto">
+                "Building scalable systems with clean interfaces, robust backends, and measurable outcomes."
               </p>
 
               <p className="text-base sm:text-lg text-gray-500 flex items-center justify-center gap-2">
