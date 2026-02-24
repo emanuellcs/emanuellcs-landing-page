@@ -27,7 +27,7 @@ const education = [
     period: "Apr 2025 - Nov 2025",
     location: "Remote",
     status: "In Progress",
-    description: "Intensive training in Full Stack Development and Career Acceleration.",
+    description: "Intensive training in Full-Stack Development and Career Acceleration.",
   },
   {
     degree: "Integrated Technical Course",
@@ -48,6 +48,8 @@ const certifications = [
   "HCIA-5G V2.0",
   "5G Basics",
   "Career Orientation Journey",
+  "Networking Academy Learn-A-Thon 2025",
+  "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate"
 ]
 
 export function Education() {

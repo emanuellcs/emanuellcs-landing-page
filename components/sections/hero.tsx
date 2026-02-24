@@ -2,16 +2,17 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, ArrowRight, Gitlab, Brain, BarChart } from "lucide-react"
+import { Github, Linkedin, Mail, ArrowRight, Gitlab, Brain, Smile } from "lucide-react"
 
 const typingStrings = [
-  "Software Engineering Student.",
-  "Full Stack Developer.",
-  "TypeScript | Node.js | Next.js.",
-  "Python & Go | Cloud & DevOps.",
-  "Clean Architecture & DDD.",
-  "AI/ML & Data Science.",
+  "Full-Stack & Backend Engineer.",
+  "Data Scientist & ML Engineer.",
+  "TypeScript, Java, Python & Go developer.",
+  "Spring Boot, NestJS & React practitioner.",
+  "Cloud-Native systems builder.",
+  "Clean Architecture & DDD advocate.",
 ]
 
 const socialLinks = [
@@ -32,14 +33,14 @@ const socialLinks = [
   {
     name: "Kaggle",
     href: "https://www.kaggle.com/emanuellcs",
-    icon: BarChart,
+    icon: Brain,
     label: "Visit Emanuel's Kaggle profile",
     hoverColor: "hover:text-blue-400",
   },
   {
     name: "Hugging Face",
     href: "https://huggingface.co/emanuellcs",
-    icon: Brain,
+    icon: Smile,
     label: "Visit Emanuel's Hugging Face profile",
     hoverColor: "hover:text-yellow-400",
   },
@@ -103,11 +104,30 @@ export function Hero() {
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-8 animate-slide-in-left">
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full ring-4 ring-teal-400/50 ring-offset-4 ring-offset-gray-900 overflow-hidden hover:ring-teal-400 transition-all duration-300">
+                  <Image
+                    src="https://github.com/emanuellcs.png"
+                    alt="Emanuel Lázaro"
+                    width={176}
+                    height={176}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
+                </div>
+                <span
+                  className="absolute bottom-1 right-1 w-5 h-5 bg-teal-400 rounded-full border-2 border-gray-900"
+                  title="Available for work"
+                />
+              </div>
+            </div>
+
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Hi! I'm <span className="gradient-text">Emanuel Lázaro</span>.
               </h1>
-              
+
               <div className="text-xl sm:text-2xl lg:text-3xl text-gray-300 min-h-[2.5rem] lg:min-h-[3rem]">
                 A{" "}
                 <span className="text-teal-400 font-medium">

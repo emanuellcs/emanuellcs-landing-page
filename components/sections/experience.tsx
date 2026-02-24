@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Trophy } from "lucide-react"
+import { Calendar, MapPin } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const experiences = [
@@ -9,27 +9,31 @@ const experiences = [
     period: "January 2025 - Present",
     duration: "Ongoing",
     type: "Competition & Research",
-    description: "Participating in global data science competitions to benchmark models, refine feature engineering, and stress-test applied ML workflows.",
+    description:
+      "Participating in global data science competitions to benchmark models, refine feature engineering, and stress-test applied ML workflows.",
     achievements: [
       "Training Deep Learning models using PyTorch and TensorFlow for Computer Vision and NLP tasks",
-      "Implementing advanced feature engineering and large-scale data processing pipelines",
+      "Implementing advanced feature engineering and large-scale data processing pipelines with Pandas and NumPy",
       "Applying mathematical optimization and regularization techniques to improve model generalization",
-      "Collaborating with the community to study SOTA architectures and modern training techniques",
+      "Fine-tuning and deploying models from Hugging Face Hub and studying SOTA architectures and modern training techniques",
     ],
   },
   {
-    title: "Full Stack Software Engineer",
+    title: "Full-Stack Software Engineer",
     company: "Freelance / Self-Employed",
     location: "Mucambo, Brazil (Remote)",
     period: "Jan 2022 - Present",
     duration: "4+ years",
     type: "Freelance",
-    description: "Delivering production-grade full stack solutions with a focus on performance, security, and maintainability using Clean Architecture.",
+    description:
+      "Delivering production-grade full-stack solutions with a focus on performance, security, and maintainability using Clean Architecture and Domain-Driven Design.",
     achievements: [
-      "Architecting RESTful & GraphQL APIs using Node.js (NestJS) and Go",
-      "Deploying microservices to AWS and multi-cloud environments using Docker and Kubernetes",
+      "Architecting RESTful, GraphQL, and gRPC APIs using Node.js (NestJS), Spring Boot (Java), and Go",
+      "Building enterprise Java backends with Spring Security (JWT/OAuth2), Spring Data JPA/Hibernate, and Spring Cloud microservices",
+      "Deploying containerized services to AWS and multi-cloud environments using Docker, Kubernetes, and Terraform",
       "Building responsive frontend interfaces with React, Next.js, and Tailwind CSS",
-      "Optimizing database performance for PostgreSQL and MongoDB including query indexing and caching",
+      "Implementing event-driven architectures using Apache Kafka and RabbitMQ for asynchronous workflows",
+      "Optimizing database performance for PostgreSQL, MySQL, and MongoDB including query indexing, caching with Redis, and Elasticsearch integration",
     ],
   },
   {

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Github, Linkedin, Brain } from "lucide-react"
+import { Mail, Github, Linkedin, Smile, Brain, Gitlab } from "lucide-react"
 
 const contactMethods = [
   {
@@ -21,9 +21,17 @@ const contactMethods = [
     color: "text-blue-500",
   },
   {
+    title: "Kaggle",
+    description: "View my Notebooks",
+    icon: Brain,
+    href: "https://www.kaggle.com/emanuellcs",
+    buttonText: "Visit Kaggle",
+    color: "text-blue-400",
+  },
+  {
     title: "Hugging Face",
     description: "Follow my AI/ML models",
-    icon: Brain,
+    icon: Smile,
     href: "https://huggingface.co/emanuellcs",
     buttonText: "View Models",
     color: "text-yellow-400",
@@ -35,6 +43,14 @@ const contactMethods = [
     href: "https://github.com/emanuellcs",
     buttonText: "Visit GitHub",
     color: "text-gray-400",
+  },
+  {
+    title: "GitLab",
+    description: "Explore my low-level code",
+    icon: Gitlab,
+    href: "https://gitlab.com/emanuellcs",
+    buttonText: "Visit GitLab",
+    color: "text-orange-400",
   },
 ]
 
@@ -55,16 +71,16 @@ export function Contact() {
             </p>
             <p>
               Whether you want to discuss <strong>Clean Architecture</strong>, <strong>Kaggle Competitions</strong>, 
-              or <strong>Full Stack Systems</strong>, I'd love to hear from you.
+              or <strong>Full-Stack Systems</strong>, I'd love to hear from you.
             </p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
           {contactMethods.map((method) => {
             const Icon = method.icon
             return (
-              <Card key={method.title} className="group card-hover h-full text-center flex flex-col">
+              <Card key={method.title} className="w-full md:w-[calc(50%-24px)] lg:w-[calc(33.333%-24px)] group card-hover h-full text-center flex flex-col">
                 <CardHeader className="pb-4">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-400/10 rounded-2xl mx-auto mb-4 group-hover:bg-teal-400/20 transition-colors">
                     <Icon size={32} className={`${method.color} group-hover:text-teal-400 transition-colors`} />

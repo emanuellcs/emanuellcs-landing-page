@@ -1,4 +1,4 @@
-import { Code, Layout, Server, Brain, Cloud, Database } from "lucide-react"
+import { Code, Layout, Server, Brain, Cloud, Database, Coffee, Cpu } from "lucide-react"
 
 const skillCategories = [
   {
@@ -7,9 +7,23 @@ const skillCategories = [
     skills: [
       { name: "TypeScript", icon: "📘" },
       { name: "JavaScript", icon: "⚡" },
+      { name: "Java", icon: "☕" },
       { name: "Python", icon: "🐍" },
       { name: "Go", icon: "🐹" },
       { name: "SQL", icon: "💾" },
+    ],
+  },
+  {
+    title: "Java Ecosystem",
+    icon: Coffee,
+    skills: [
+      { name: "Spring Boot", icon: "🌿" },
+      { name: "Spring Security", icon: "🔒" },
+      { name: "Spring Cloud", icon: "☁️" },
+      { name: "Hibernate/JPA", icon: "🗄️" },
+      { name: "Maven", icon: "📦" },
+      { name: "Gradle", icon: "🐘" },
+      { name: "JUnit 5", icon: "🧪" },
     ],
   },
   {
@@ -22,6 +36,9 @@ const skillCategories = [
       { name: "FastAPI", icon: "⚡" },
       { name: "Go Gin", icon: "🍸" },
       { name: "GraphQL", icon: "◈" },
+      { name: "gRPC", icon: "🔗" },
+      { name: "RabbitMQ", icon: "🐇" },
+      { name: "Apache Kafka", icon: "📨" },
     ],
   },
   {
@@ -43,11 +60,24 @@ const skillCategories = [
       { name: "AWS", icon: "☁️" },
       { name: "Docker", icon: "🐳" },
       { name: "Kubernetes", icon: "⚓" },
-      { name: "CI/CD", icon: "🔄" },
+      { name: "GitHub Actions", icon: "⚙️" },
+      { name: "Terraform", icon: "🏗️" },
       { name: "Azure", icon: "🟦" },
       { name: "Google Cloud", icon: "🌈" },
       { name: "Lambda", icon: "⚡" },
-      { name: "CloudFormation", icon: "🏗️" },
+      { name: "CloudFormation", icon: "🔧" },
+      { name: "Nginx", icon: "🌐" },
+    ],
+  },
+  {
+    title: "Databases & Caching",
+    icon: Database,
+    skills: [
+      { name: "PostgreSQL", icon: "🐘" },
+      { name: "MySQL", icon: "🐬" },
+      { name: "MongoDB", icon: "🍃" },
+      { name: "Redis", icon: "🔴" },
+      { name: "Elasticsearch", icon: "🔍" },
     ],
   },
   {
@@ -64,13 +94,13 @@ const skillCategories = [
     ],
   },
   {
-    title: "Databases & Caching",
-    icon: Database,
+    title: "Systems & Low-Level",
+    icon: Cpu,
     skills: [
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "MySQL", icon: "🐬" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "Redis", icon: "🔴" },
+      { name: "C", icon: "🔵" },
+      { name: "C++", icon: "⚙️" },
+      { name: "C#", icon: "🟣" },
+      { name: "Rust", icon: "🦀" },
     ],
   },
 ]
@@ -85,18 +115,19 @@ export function Skills() {
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full" />
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            My stack anchors on the <strong>TypeScript ecosystem</strong> (Node.js, React, Next.js, NestJS), 
-            supported by <strong>Python and Go</strong> for automation, data workflows, and concurrency-critical services.
+            My stacks span the <strong>TypeScript ecosystem</strong> (Node.js, React, Next.js, NestJS), the{" "}
+            <strong>Java ecosystem</strong> (Spring Boot, Spring Cloud, JPA), and{" "}
+            <strong>Python and Go</strong> for automation, data workflows, and concurrency-critical services.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {skillCategories.map((category) => {
             const CategoryIcon = category.icon
             return (
               <div
                 key={category.title}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-teal-400/50 transition-all duration-300 hover:bg-teal-400/5 group"
+                className="w-full md:w-[calc(50%-16px)] xl:w-[calc(33.333%-22px)] bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-teal-400/50 transition-all duration-300 hover:bg-teal-400/5 group"
               >
                 <div className="text-center mb-6">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-400/10 rounded-2xl mb-4 group-hover:bg-teal-400/20 transition-colors">

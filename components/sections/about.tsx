@@ -1,10 +1,15 @@
-import { Code, Server, Cloud, Database, Brain, Layers } from "lucide-react"
+import { Code, Server, Cloud, Database, Brain, Layers, Coffee, Cpu } from "lucide-react"
 
 const highlights = [
   {
     icon: Code,
-    title: "Full Stack Systems",
+    title: "Full-Stack Systems",
     description: "React, Next.js, Node.js, and NestJS with production-grade ergonomics.",
+  },
+  {
+    icon: Coffee,
+    title: "Java / Spring Backend",
+    description: "Spring Boot, Spring Cloud, JPA/Hibernate, Spring Security, and Maven/Gradle.",
   },
   {
     icon: Cloud,
@@ -24,7 +29,12 @@ const highlights = [
   {
     icon: Server,
     title: "Backend Engineering",
-    description: "REST/GraphQL APIs, microservices patterns, and high-concurrency systems.",
+    description: "REST/GraphQL/gRPC APIs, microservices patterns, and event-driven systems with Kafka & RabbitMQ.",
+  },
+  {
+    icon: Cpu,
+    title: "Systems & Low-Level",
+    description: "C, C++, C#, and Rust for performance-critical code, game engines, and concurrency patterns.",
   },
   {
     icon: Database,
@@ -54,25 +64,33 @@ export function About() {
           <div className="space-y-8">
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
               <p>
-                I am a <strong>Software Engineering & Computer Science student (2025–2029)</strong> focused on high-performance 
-                Full Stack development. I work with an engineering vision, combining modern interfaces with robust backends.
+                I'm a <strong>Full-Stack Engineer, Data Scientist & ML Engineer</strong>, and a double-degree student
+                in <strong>Software Engineering & Computer Science (2025–2029)</strong>. I build across the entire
+                stack, from pixel-precise frontends to distributed backends and trained neural networks.
               </p>
               <p>
-                My development philosophy is guided by <strong>Clean Architecture</strong>, <strong>Domain-Driven Design (DDD)</strong>, 
-                and <strong>SOLID</strong> principles. I strive to create code that scales, maintains, and delivers real value, 
-                ensuring production-grade ergonomics in every project.
+                I operate across multiple ecosystems: the <strong>TypeScript ecosystem</strong> (React, Next.js,
+                Node.js, NestJS) for modern web, the <strong>Java ecosystem</strong> (Spring Boot, Spring Cloud,
+                JPA/Hibernate) for enterprise backends, <strong>Python</strong> for data science and ML pipelines, and{" "}
+                <strong>Go, C++, and Rust</strong> when performance and low-level control matter most.
               </p>
               <p>
-                My primary stack anchors on the <strong>TypeScript ecosystem</strong> (Node.js, React, Next.js, NestJS), while 
-                strategically utilizing <strong>Python and Go</strong> for automation, data workflows, and concurrency-critical services.
+                On the AI/ML side, I train and fine-tune Deep Learning models using <strong>PyTorch</strong> and{" "}
+                <strong>TensorFlow</strong>, compete on <strong>Kaggle</strong>, and publish models on{" "}
+                <strong>Hugging Face</strong>, with a focus on Computer Vision, NLP, and applied data workflows.
               </p>
               <p>
-                I am currently open to <strong>Internships</strong> and <strong>Junior Engineering</strong> roles where I can apply 
-                modern web development, cloud-native delivery, and applied AI/ML to real-world systems.
+                Everything I build is shaped by <strong>Clean Architecture</strong>,{" "}
+                <strong>Domain-Driven Design</strong>, and <strong>SOLID</strong> principles. I care about code that
+                is testable, maintainable, and built to last, not just code that works today.
+              </p>
+              <p>
+                I'm actively looking for <strong>Internship</strong> or <strong>Junior Engineering</strong> roles where
+                I can contribute to real systems, learn from strong teams, and grow as an engineer.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-12">
               {highlights.map((highlight) => {
                 const Icon = highlight.icon
                 return (
