@@ -1,12 +1,33 @@
-import { Calendar, MapPin } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Calendar, MapPin } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const experiences = [
+  {
+    title: "Full-Stack Developer",
+    company: "Spaço Bellas",
+    location: "São Paulo, Brazil (Remote)",
+    period: "Sep 2025 - Nov 2025",
+    duration: "3 months",
+    type: "Freelance",
+    description:
+      "Spearheaded the end-to-end development of two core digital platforms for a luxury Beauty & Wellness Spa, driving digital transformation for both customer acquisition and internal business operations.",
+    achievements: [
+      "Customer-Facing Web Platform (Spaço Bellas): Engineered a high-performance, mobile-first web platform to drive conversions using React 18, TypeScript, and Vite. Built specialized landing pages for B2C services (Spa Days, VIP Memberships) and B2B solutions (Corporate Wellness) featuring seamless WhatsApp integration and smooth UI animations with Framer Motion. Implemented a scalable Feature-Based Architecture supported by Drizzle ORM, Express.js, and Supabase (PostgreSQL).",
+      "CRM & Management Solution (Bella Gestor): Architected a comprehensive internal CRM using Next.js 15 (App Router) and React 19 to streamline salon operations, appointments, and client relationships. Developed advanced scheduling capabilities with full Google Calendar API synchronization and built a robust Role-Based Access Control (RBAC) system for Admins, Professionals, and Secretaries. Integrated financial tracking, sales workflows, and InfinitePay payment processing, visualizing data through real-time Recharts analytics dashboards.",
+      "Tech Stack: React (18/19), Next.js 15, TypeScript, Tailwind CSS, Vite, Supabase (PostgreSQL), Drizzle ORM, Framer Motion, shadcn/ui, React Hook Form, Zod.",
+    ],
+  },
   {
     title: "Machine Learning & Data Science Competitor",
     company: "Kaggle",
     location: "Remote / Global",
-    period: "January 2025 - Present",
+    period: "January 2026 - Present",
     duration: "Ongoing",
     type: "Competition & Research",
     description:
@@ -43,14 +64,15 @@ const experiences = [
     period: "August 2024 - December 2024",
     duration: "5 months",
     type: "Internship",
-    description: "Gained practical experience in visual communication and digital media production.",
+    description:
+      "Gained practical experience in visual communication and digital media production.",
     achievements: [
       "Developed skills in graphic design and visual communication",
       "Collaborated on design projects and client deliverables",
       "Applied technical knowledge in a professional team environment",
     ],
   },
-]
+];
 
 export function Experience() {
   return (
@@ -70,7 +92,9 @@ export function Experience() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div>
                     <CardTitle className="text-xl mb-2">{exp.title}</CardTitle>
-                    <CardDescription className="text-lg font-medium text-teal-400 mb-2">{exp.company}</CardDescription>
+                    <CardDescription className="text-lg font-medium text-teal-400 mb-2">
+                      {exp.company}
+                    </CardDescription>
                   </div>
                   <div className="flex flex-col sm:items-end gap-2">
                     <div className="flex items-center text-sm text-gray-400">
@@ -89,14 +113,23 @@ export function Experience() {
               </CardHeader>
 
               <CardContent>
-                <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {exp.description}
+                </p>
 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-teal-400 text-sm">Key Responsibilities & Tech:</h4>
+                  <h4 className="font-semibold text-teal-400 text-sm">
+                    Key Responsibilities & Tech:
+                  </h4>
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start text-sm text-gray-300">
-                        <span className="text-teal-400 mr-3 mt-1.5 flex-shrink-0">•</span>
+                      <li
+                        key={i}
+                        className="flex items-start text-sm text-gray-300"
+                      >
+                        <span className="text-teal-400 mr-3 mt-1.5 flex-shrink-0">
+                          •
+                        </span>
                         <span className="leading-relaxed">{achievement}</span>
                       </li>
                     ))}
@@ -108,5 +141,5 @@ export function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }

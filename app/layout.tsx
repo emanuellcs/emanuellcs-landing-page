@@ -1,17 +1,23 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Fira_Code } from "next/font/google"
-import "./globals.css"
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
-import { ScrollToTop } from "@/components/ui/scroll-to-top"
-import { ParticleBackground } from "@/components/ui/particle-background"
+import type React from "react";
+import type { Metadata } from "next";
+import { Fira_Code, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { ParticleBackground } from "@/components/ui/particle-background";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
   variable: "--font-fira-code",
   display: "swap",
-})
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Emanuel Lázaro - Full-Stack Engineer, Data Scientist & ML Engineer",
@@ -84,16 +90,18 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${firaCode.variable} font-mono bg-gray-900 text-gray-100 antialiased`}>
+      <body
+        className={`${firaCode.variable} ${jetbrainsMono.variable} font-mono bg-gray-900 text-gray-100 antialiased`}
+      >
         <ParticleBackground />
         <Header />
         {children}
@@ -101,5 +109,5 @@ export default function RootLayout({
         <ScrollToTop />
       </body>
     </html>
-  )
+  );
 }

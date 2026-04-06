@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "#hero" },
@@ -13,135 +13,159 @@ const navigation = [
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
-]
+];
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("hero")
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [indicatorStyle, setIndicatorStyle] = useState({ width: 0, left: 0 })
-  const navRefs = useRef<(HTMLAnchorElement | null)[]>([])
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [indicatorStyle, setIndicatorStyle] = useState({ width: 0, left: 0 });
+  const navRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const isClickScroll = useRef(false);
+  const clickScrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 50);
+
+      if (isClickScroll.current) return;
 
       // Update active section based on scroll position
-      const sections = navigation.map((item) => item.href.slice(1))
+      const sections = navigation.map((item) => item.href.slice(1));
       const currentSection = sections.find((section) => {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const rect = element.getBoundingClientRect()
-          return rect.top <= 100 && rect.bottom >= 100
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
         }
-        return false
-      })
+        return false;
+      });
 
       if (currentSection && currentSection !== activeSection) {
-        setActiveSection(currentSection)
+        setActiveSection(currentSection);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [activeSection])
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeSection]);
 
   // Update indicator position when active section changes
   useEffect(() => {
-    const activeIndex = navigation.findIndex((item) => item.href.slice(1) === activeSection)
-    const activeRef = navRefs.current[activeIndex]
+    const activeIndex = navigation.findIndex(
+      (item) => item.href.slice(1) === activeSection,
+    );
+    const activeRef = navRefs.current[activeIndex];
 
     if (activeRef) {
-      const { offsetWidth, offsetLeft } = activeRef
+      const { offsetWidth, offsetLeft } = activeRef;
       setIndicatorStyle({
         width: offsetWidth,
         left: offsetLeft,
-      })
+      });
     }
-  }, [activeSection])
+  }, [activeSection]);
 
   // Handle window resize to recalculate indicator position
   useEffect(() => {
     const handleResize = () => {
-      const activeIndex = navigation.findIndex((item) => item.href.slice(1) === activeSection)
-      const activeRef = navRefs.current[activeIndex]
+      const activeIndex = navigation.findIndex(
+        (item) => item.href.slice(1) === activeSection,
+      );
+      const activeRef = navRefs.current[activeIndex];
 
       if (activeRef) {
-        const { offsetWidth, offsetLeft } = activeRef
+        const { offsetWidth, offsetLeft } = activeRef;
         setIndicatorStyle({
           width: offsetWidth,
           left: offsetLeft,
-        })
+        });
       }
-    }
+    };
 
-    window.addEventListener("resize", handleResize, { passive: true })
-    return () => window.removeEventListener("resize", handleResize)
-  }, [activeSection])
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => window.removeEventListener("resize", handleResize);
+  }, [activeSection]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"
-      document.body.style.paddingRight = "0px"
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "0px";
     } else {
-      document.body.style.overflow = "unset"
-      document.body.style.paddingRight = "unset"
+      document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "unset";
     }
 
     return () => {
-      document.body.style.overflow = "unset"
-      document.body.style.paddingRight = "unset"
-    }
-  }, [isOpen])
+      document.body.style.overflow = "unset";
+      document.body.style.paddingRight = "unset";
+    };
+  }, [isOpen]);
 
   const handleNavClick = (href: string, index: number) => {
-    setIsOpen(false)
+    setIsOpen(false);
+
+    isClickScroll.current = true;
+    if (clickScrollTimeout.current) clearTimeout(clickScrollTimeout.current);
 
     // Immediately update active section for instant visual feedback
-    const newSection = href.slice(1)
-    setActiveSection(newSection)
+    const newSection = href.slice(1);
+    setActiveSection(newSection);
 
     // Update indicator position immediately
-    const targetRef = navRefs.current[index]
+    const targetRef = navRefs.current[index];
     if (targetRef) {
-      const { offsetWidth, offsetLeft } = targetRef
+      const { offsetWidth, offsetLeft } = targetRef;
       setIndicatorStyle({
         width: offsetWidth,
         left: offsetLeft,
-      })
+      });
     }
 
     // Smooth scroll to section
-    const element = document.getElementById(newSection)
+    const element = document.getElementById(newSection);
     if (element) {
-      const headerHeight = 80
-      const elementPosition = element.offsetTop - headerHeight
+      const headerHeight = 80;
+      const elementPosition = element.offsetTop - headerHeight;
       window.scrollTo({
         top: elementPosition,
         behavior: "smooth",
-      })
+      });
+
+      clickScrollTimeout.current = setTimeout(() => {
+        isClickScroll.current = false;
+      }, 800);
+    } else {
+      isClickScroll.current = false;
     }
-  }
+  };
 
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800" : "bg-transparent"
+          isScrolled
+            ? "bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-800"
+            : "bg-transparent"
         }`}
       >
-        <nav className="container-custom" role="navigation" aria-label="Main navigation">
+        <nav
+          className="container-custom"
+          role="navigation"
+          aria-label="Main navigation"
+        >
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link
               href="#hero"
-              className={`text-xl sm:text-2xl font-bold text-teal-400 hover:text-teal-300 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1 relative z-50 ${
+              className={`text-xl sm:text-2xl font-bold text-teal-400 hover:text-teal-300 transition-colors focus:outline-none rounded-md px-2 py-1 relative z-50 ${
                 isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
               } md:opacity-100 md:pointer-events-auto`}
+              style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}
               onClick={(e) => {
-                e.preventDefault()
-                handleNavClick("#hero", 0)
+                e.preventDefault();
+                handleNavClick("#hero", 0);
               }}
               aria-label="Emanuel Lázaro - Go to top"
             >
@@ -155,17 +179,21 @@ export function Header() {
                   <Link
                     key={item.name}
                     ref={(el) => {
-                      navRefs.current[index] = el
+                      navRefs.current[index] = el;
                     }}
                     href={item.href}
                     onClick={(e) => {
-                      e.preventDefault()
-                      handleNavClick(item.href, index)
+                      e.preventDefault();
+                      handleNavClick(item.href, index);
                     }}
-                    className={`relative px-3 py-3 text-sm font-medium transition-all duration-200 hover:text-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md z-10 ${
-                      activeSection === item.href.slice(1) ? "text-teal-400" : "text-gray-300"
+                    className={`relative px-3 py-3 text-sm font-medium transition-all duration-200 hover:text-teal-400 focus:outline-none rounded-md z-10 ${
+                      activeSection === item.href.slice(1)
+                        ? "text-teal-400"
+                        : "text-gray-300"
                     }`}
-                    aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
+                    aria-current={
+                      activeSection === item.href.slice(1) ? "page" : undefined
+                    }
                   >
                     {item.name}
                   </Link>
@@ -196,13 +224,17 @@ export function Header() {
                 <Menu
                   size={24}
                   className={`absolute inset-0 transition-all duration-300 ease-out ${
-                    isOpen ? "opacity-0 rotate-180 scale-75" : "opacity-100 rotate-0 scale-100"
+                    isOpen
+                      ? "opacity-0 rotate-180 scale-75"
+                      : "opacity-100 rotate-0 scale-100"
                   }`}
                 />
                 <X
                   size={24}
                   className={`absolute inset-0 transition-all duration-300 ease-out ${
-                    isOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-180 scale-75"
+                    isOpen
+                      ? "opacity-100 rotate-0 scale-100"
+                      : "opacity-0 rotate-180 scale-75"
                   }`}
                 />
               </div>
@@ -240,7 +272,10 @@ export function Header() {
           {/* Menu Header - Fixed positioning to prevent overlap */}
           <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-700/50 min-h-[80px]">
             <div className="flex-1 min-w-0">
-              <h2 id="mobile-menu-title" className="text-base sm:text-lg font-semibold text-teal-400 truncate pr-2">
+              <h2
+                id="mobile-menu-title"
+                className="text-base sm:text-lg font-semibold text-teal-400 truncate pr-2"
+              >
                 Navigation
               </h2>
             </div>
@@ -257,24 +292,32 @@ export function Header() {
 
           {/* Menu Items - Scrollable content area */}
           <div className="flex-1 overflow-y-auto">
-            <nav className="flex flex-col p-4 sm:p-6 space-y-2" role="navigation" aria-label="Mobile navigation">
+            <nav
+              className="flex flex-col p-4 sm:p-6 space-y-2"
+              role="navigation"
+              aria-label="Mobile navigation"
+            >
               {navigation.map((item, index) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={(e) => {
-                    e.preventDefault()
-                    handleNavClick(item.href, index)
+                    e.preventDefault();
+                    handleNavClick(item.href, index);
                   }}
-                  className={`group relative flex items-center px-4 py-4 text-base font-medium transition-all duration-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-gray-900 ${
+                  className={`group relative flex items-center px-4 py-4 text-base font-medium transition-all duration-200 rounded-xl focus:outline-none ${
                     activeSection === item.href.slice(1)
                       ? "text-teal-400 bg-teal-400/10 shadow-lg shadow-teal-400/10"
                       : "text-gray-300 hover:text-teal-400 hover:bg-teal-400/5"
                   }`}
-                  aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
+                  aria-current={
+                    activeSection === item.href.slice(1) ? "page" : undefined
+                  }
                   style={{
                     animationDelay: `${index * 50}ms`,
-                    animation: isOpen ? `slideInRight 0.4s ease-out forwards` : "none",
+                    animation: isOpen
+                      ? `slideInRight 0.4s ease-out forwards`
+                      : "none",
                   }}
                 >
                   {/* Active indicator */}
@@ -294,10 +337,12 @@ export function Header() {
 
           {/* Menu Footer - Fixed at bottom */}
           <div className="border-t border-gray-700/50 p-4 sm:p-6">
-            <p className="text-xs text-gray-500 text-center">© {new Date().getFullYear()} Emanuel Lázaro</p>
+            <p className="text-xs text-gray-500 text-center">
+              © {new Date().getFullYear()} Emanuel Lázaro
+            </p>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -1,4 +1,13 @@
-import { Code, Layout, Server, Brain, Cloud, Database, Coffee, Cpu } from "lucide-react"
+import {
+  Code,
+  Layout,
+  Server,
+  Brain,
+  Cloud,
+  Database,
+  Coffee,
+  Cpu,
+} from "lucide-react";
 
 const skillCategories = [
   {
@@ -94,7 +103,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Systems & Low-Level",
+    title: "Hobby: Systems & Low-Level",
     icon: Cpu,
     skills: [
       { name: "C", icon: "🔵" },
@@ -103,7 +112,7 @@ const skillCategories = [
       { name: "Rust", icon: "🦀" },
     ],
   },
-]
+];
 
 export function Skills() {
   return (
@@ -115,15 +124,16 @@ export function Skills() {
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full" />
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            My stacks span the <strong>TypeScript ecosystem</strong> (Node.js, React, Next.js, NestJS), the{" "}
-            <strong>Java ecosystem</strong> (Spring Boot, Spring Cloud, JPA), and{" "}
-            <strong>Python and Go</strong> for automation, data workflows, and concurrency-critical services.
+            My stacks span the <strong>TypeScript ecosystem</strong> (Node.js,
+            React, Next.js, NestJS), the <strong>Java ecosystem</strong> (Spring
+            Boot, Spring Cloud, JPA), and <strong>Python and Go</strong> for
+            automation, data workflows, and concurrency-critical services.
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">
           {skillCategories.map((category) => {
-            const CategoryIcon = category.icon
+            const CategoryIcon = category.icon;
             return (
               <div
                 key={category.title}
@@ -133,7 +143,9 @@ export function Skills() {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-400/10 rounded-2xl mb-4 group-hover:bg-teal-400/20 transition-colors">
                     <CategoryIcon size={32} className="text-teal-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-teal-400 mb-2">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-teal-400 mb-2">
+                    {category.title}
+                  </h3>
                   <div className="w-12 h-0.5 bg-teal-400 mx-auto rounded-full" />
                 </div>
 
@@ -153,10 +165,10 @@ export function Skills() {
                   ))}
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

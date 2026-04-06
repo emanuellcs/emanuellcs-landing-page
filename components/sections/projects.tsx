@@ -1,34 +1,57 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, Gitlab, Brain, ArrowRight, Server, Terminal, Cloud, Smile } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Brain,
+  ArrowRight,
+  Server,
+  Terminal,
+  Cloud,
+  Smile,
+} from "lucide-react";
+import { FaGithub as Github, FaGitlab as Gitlab } from "react-icons/fa6";
 
 const platforms = [
   {
-    title: "Open Source & Web",
+    title: "All Projects & Code",
     platform: "GitHub",
     description:
-      "My primary hub for production-grade applications. Home to my work with the TypeScript ecosystem (NestJS, Next.js), the Java ecosystem (Spring Boot, Spring Cloud), Python, Go, Databases (SQL/NoSQL) and Cloud/DevOps infrastructure.",
+      "The central hub for all my code. Home to production-grade applications across Web, Cloud, and Data, as well as my passionate exploration into game engines and low-level systems (C, C++, C#, Rust).",
     icon: Github,
     secondaryIcon: Cloud,
     href: "https://github.com/emanuellcs",
     color: "text-gray-200",
     hoverColor: "group-hover:text-white",
     bgColor: "bg-gray-800",
-    tags: ["TypeScript", "Java / Spring Boot","Python", "Go", "Microservices", "AWS"],
+    tags: [
+      "TypeScript",
+      "Java / Spring Boot",
+      "Python",
+      "Go",
+      "C/C++",
+      "Rust",
+      "C#",
+    ],
   },
   {
-    title: "Systems & Low-Level",
+    title: "Open Source & Community",
     platform: "GitLab",
     description:
-      "A laboratory for high-performance engineering. Here I explore system design, concurrency patterns, and game engines using C#, C/C++, and Rust.",
+      "My dedicated space for external open-source contributions, community initiatives, and collaborative work outside of my personal portfolio.",
     icon: Gitlab,
     secondaryIcon: Terminal,
     href: "https://gitlab.com/emanuellcs",
     color: "text-orange-500",
     hoverColor: "group-hover:text-orange-400",
     bgColor: "bg-orange-900/20",
-    tags: ["C#", "C/C++", "Rust"],
+    tags: ["Open Source", "Community", "Contributions"],
   },
   {
     title: "AI & Machine Learning",
@@ -56,7 +79,7 @@ const platforms = [
     bgColor: "bg-blue-900/20",
     tags: ["Python", "Data Analysis", "Competitions"],
   },
-]
+];
 
 export function Projects() {
   return (
@@ -68,15 +91,15 @@ export function Projects() {
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full mb-8" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I organize my development work across specialized platforms. Explore my code, models, and datasets based on
-            your area of interest.
+            I organize my development work across specialized platforms. Explore
+            my code, models, and datasets based on your area of interest.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {platforms.map((item) => {
-            const Icon = item.icon
-            const SecondaryIcon = item.secondaryIcon
+            const Icon = item.icon;
+            const SecondaryIcon = item.secondaryIcon;
 
             return (
               <Card
@@ -95,16 +118,27 @@ export function Projects() {
                     >
                       <Icon size={32} />
                     </div>
-                    <SecondaryIcon size={24} className="text-gray-600 group-hover:text-teal-400 transition-colors" />
+                    <SecondaryIcon
+                      size={24}
+                      className="text-gray-600 group-hover:text-teal-400 transition-colors"
+                    />
                   </div>
                   <div className="space-y-1">
-                    <span className={`text-sm font-bold tracking-wider uppercase ${item.color}`}>{item.platform}</span>
-                    <CardTitle className="text-xl text-white">{item.title}</CardTitle>
+                    <span
+                      className={`text-sm font-bold tracking-wider uppercase ${item.color}`}
+                    >
+                      {item.platform}
+                    </span>
+                    <CardTitle className="text-xl text-white">
+                      {item.title}
+                    </CardTitle>
                   </div>
                 </CardHeader>
 
                 <CardContent className="flex-grow relative z-10">
-                  <CardDescription className="text-gray-400 leading-relaxed mb-6">{item.description}</CardDescription>
+                  <CardDescription className="text-gray-400 leading-relaxed mb-6">
+                    {item.description}
+                  </CardDescription>
 
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {item.tags.map((tag) => (
@@ -130,15 +164,19 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"
                     >
-                      Visit Profile <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                      Visit Profile{" "}
+                      <ArrowRight
+                        size={16}
+                        className="group-hover:translate-x-1 transition-transform"
+                      />
                     </Link>
                   </Button>
                 </CardFooter>
               </Card>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

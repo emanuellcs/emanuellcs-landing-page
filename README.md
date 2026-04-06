@@ -20,12 +20,14 @@ A modern, responsive personal landing page and portfolio built with Next.js, Typ
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/emanuellcs/emanuellcs-landing-page.git
 cd emanuellcs-landing-page
 ```
 
 2. Install dependencies (recommended: `pnpm`):
+
 ```bash
 pnpm install
 # or with npm
@@ -35,6 +37,7 @@ npm install
 ## Useful Scripts
 
 Start the development server:
+
 ```bash
 pnpm dev
 # or
@@ -42,6 +45,7 @@ npm run dev
 ```
 
 Build for production:
+
 ```bash
 pnpm build
 pnpm start

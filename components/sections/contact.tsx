@@ -1,7 +1,18 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Github, Linkedin, Smile, Brain, Gitlab } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Mail, Smile, Brain } from "lucide-react";
+import {
+  FaGithub as Github,
+  FaLinkedin as Linkedin,
+  FaGitlab as Gitlab,
+} from "react-icons/fa6";
 
 const contactMethods = [
   {
@@ -38,7 +49,7 @@ const contactMethods = [
   },
   {
     title: "GitHub",
-    description: "Explore my code",
+    description: "Explore all my projects",
     icon: Github,
     href: "https://github.com/emanuellcs",
     buttonText: "Visit GitHub",
@@ -46,13 +57,13 @@ const contactMethods = [
   },
   {
     title: "GitLab",
-    description: "Explore my low-level code",
+    description: "Open-source contributions",
     icon: Gitlab,
     href: "https://gitlab.com/emanuellcs",
     buttonText: "Visit GitLab",
     color: "text-orange-400",
   },
-]
+];
 
 export function Contact() {
   return (
@@ -63,27 +74,36 @@ export function Contact() {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full mb-8" />
-          
+
           <div className="max-w-3xl mx-auto space-y-4 text-gray-300 leading-relaxed">
             <p className="text-xl">
-              I am actively pursuing <strong>Internship</strong> and <strong>Junior Engineering</strong> roles 
-              where I can apply modern web development, cloud-native delivery, and AI/ML to production contexts.
+              I am actively pursuing <strong>Internship</strong> and{" "}
+              <strong>Junior Engineering</strong> roles where I can apply modern
+              web development, cloud-native delivery, and AI/ML to production
+              contexts.
             </p>
             <p>
-              Whether you want to discuss <strong>Clean Architecture</strong>, <strong>Kaggle Competitions</strong>, 
-              or <strong>Full-Stack Systems</strong>, I'd love to hear from you.
+              Whether you want to discuss <strong>Clean Architecture</strong>,{" "}
+              <strong>Kaggle Competitions</strong>, or{" "}
+              <strong>Full-Stack Systems</strong>, I'd love to hear from you.
             </p>
           </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
           {contactMethods.map((method) => {
-            const Icon = method.icon
+            const Icon = method.icon;
             return (
-              <Card key={method.title} className="w-full md:w-[calc(50%-24px)] lg:w-[calc(33.333%-24px)] group card-hover h-full text-center flex flex-col">
+              <Card
+                key={method.title}
+                className="w-full md:w-[calc(50%-24px)] lg:w-[calc(33.333%-24px)] group card-hover h-full text-center flex flex-col"
+              >
                 <CardHeader className="pb-4">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-400/10 rounded-2xl mx-auto mb-4 group-hover:bg-teal-400/20 transition-colors">
-                    <Icon size={32} className={`${method.color} group-hover:text-teal-400 transition-colors`} />
+                    <Icon
+                      size={32}
+                      className={`${method.color} group-hover:text-teal-400 transition-colors`}
+                    />
                   </div>
                   <CardTitle className="text-xl">{method.title}</CardTitle>
                 </CardHeader>
@@ -93,21 +113,31 @@ export function Contact() {
                     {method.description}
                   </CardDescription>
 
-                  <Button asChild className="w-full mt-auto" leftIcon={<Icon size={18} />}>
+                  <Button
+                    asChild
+                    className="w-full mt-auto"
+                    leftIcon={<Icon size={18} />}
+                  >
                     <Link
                       href={method.href}
-                      target={method.href.startsWith("http") ? "_blank" : undefined}
-                      rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      target={
+                        method.href.startsWith("http") ? "_blank" : undefined
+                      }
+                      rel={
+                        method.href.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                     >
                       {method.buttonText}
                     </Link>
                   </Button>
                 </CardContent>
               </Card>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

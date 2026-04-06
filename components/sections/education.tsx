@@ -1,15 +1,32 @@
-import { GraduationCap, Calendar, MapPin, Award } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const education = [
+  {
+    degree: "Technological Residency",
+    field: "Cloud Computing",
+    institution: "Instituto iRede",
+    period: "Mar 2026 - Mar 2027",
+    location: "Brazil",
+    status: "In Progress",
+    description:
+      "12-month Technological Residency Program in Cloud Computing (Capacita Brasil/MCTI). Intensive, hands-on program combining high-level technical training with practical immersion. Curriculum covers public/private/hybrid clouds, IaaS, PaaS, SaaS, AWS services, containers, and low-coupled application integration. Emphasizes real-world projects, DevOps practices, and scalable cloud solutions.",
+  },
   {
     degree: "Bachelor's Degree",
     field: "Computer Science",
     institution: "Uninter",
     period: "Nov 2025 - Nov 2029",
     location: "Brazil",
-    status: "Enrolled",
-    description: "Focus on Algorithms, Data Structures, and Mathematical Foundations.",
+    status: "In Progress",
+    description:
+      "Focus on Algorithms, Data Structures, and Mathematical Foundations.",
   },
   {
     degree: "Bachelor's Degree",
@@ -18,7 +35,8 @@ const education = [
     period: "Jan 2025 - Jan 2029",
     location: "Brazil",
     status: "In Progress",
-    description: "Focus on System Design, Software Architecture, and Engineering Practices.",
+    description:
+      "Focus on System Design, Software Architecture, and Engineering Practices.",
   },
   {
     degree: "Professional Formation",
@@ -26,8 +44,9 @@ const education = [
     institution: "Escola DNC",
     period: "Apr 2025 - Nov 2025",
     location: "Remote",
-    status: "In Progress",
-    description: "Intensive training in Full-Stack Development and Career Acceleration.",
+    status: "Completed",
+    description:
+      "Intensive training in Full-Stack Development and Career Acceleration.",
   },
   {
     degree: "Integrated Technical Course",
@@ -36,9 +55,10 @@ const education = [
     period: "Jan 2022 - Dec 2024",
     location: "Ceará, Brazil",
     status: "Completed",
-    description: "Foundation in programming logic, web development, and database management.",
+    description:
+      "Foundation in programming logic, web development, and database management.",
   },
-]
+];
 
 const certifications = [
   "AWS CloudFormation",
@@ -49,8 +69,8 @@ const certifications = [
   "5G Basics",
   "Career Orientation Journey",
   "Networking Academy Learn-A-Thon 2025",
-  "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate"
-]
+  "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+];
 
 export function Education() {
   return (
@@ -62,15 +82,18 @@ export function Education() {
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto rounded-full" />
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-             A continuous journey combining academic rigor in <strong>Computer Science & Software Engineering</strong> 
-             with practical, professional certification in cloud technologies.
+            A continuous journey combining academic rigor in{" "}
+            <strong>Computer Science & Software Engineering</strong>
+            with practical, professional certification in cloud technologies.
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
           {/* Education */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-teal-400 mb-8 text-center">Academic Background</h3>
+            <h3 className="text-2xl font-bold text-teal-400 mb-8 text-center">
+              Academic Background
+            </h3>
             <div className="grid gap-6">
               {education.map((edu, index) => (
                 <Card key={index} className="group card-hover">
@@ -81,11 +104,15 @@ export function Education() {
                           <GraduationCap size={24} className="text-teal-400" />
                         </div>
                         <div>
-                          <CardTitle className="text-xl mb-1">{edu.degree}</CardTitle>
+                          <CardTitle className="text-xl mb-1">
+                            {edu.degree}
+                          </CardTitle>
                           <CardDescription className="text-lg font-medium text-teal-400 mb-2">
                             {edu.field}
                           </CardDescription>
-                          <p className="text-gray-300 font-medium">{edu.institution}</p>
+                          <p className="text-gray-300 font-medium">
+                            {edu.institution}
+                          </p>
                         </div>
                       </div>
                       <div className="flex flex-col lg:items-end gap-2">
@@ -110,7 +137,9 @@ export function Education() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-400 text-sm ml-16">{edu.description}</p>
+                    <p className="text-gray-400 text-sm ml-16">
+                      {edu.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -119,7 +148,9 @@ export function Education() {
 
           {/* Certifications */}
           <div>
-            <h3 className="text-2xl font-bold text-teal-400 mb-8 text-center">Certifications & Courses</h3>
+            <h3 className="text-2xl font-bold text-teal-400 mb-8 text-center">
+              Certifications & Courses
+            </h3>
             <Card className="group card-hover">
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -128,8 +159,13 @@ export function Education() {
                       key={index}
                       className="flex items-center p-3 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-teal-400/50 transition-all duration-300 hover:bg-teal-400/5"
                     >
-                      <Award size={16} className="text-teal-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm text-gray-300 font-medium">{cert}</span>
+                      <Award
+                        size={16}
+                        className="text-teal-400 mr-3 flex-shrink-0"
+                      />
+                      <span className="text-sm text-gray-300 font-medium">
+                        {cert}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -139,5 +175,5 @@ export function Education() {
         </div>
       </div>
     </section>
-  )
+  );
 }
