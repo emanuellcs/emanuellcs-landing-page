@@ -18,6 +18,15 @@ const typingStrings = [
   "Spring Boot, NestJS & React practitioner.",
   "Cloud-Native systems builder.",
   "Clean Architecture & DDD advocate.",
+  "WebGL, WebGPU & 3D Graphics enthusiast.",
+  "DevOps & Infrastructure (AWS, Docker, K8s).",
+  "Database specialist (SQL, NoSQL, Redis).",
+  "AI/ML practitioner (PyTorch, TensorFlow).",
+  "Systems & Low-Level enthusiast (Rust, C++, C).",
+  "Building scalable, distributed architectures.",
+  "Crafting high-performance REST & gRPC APIs.",
+  "Passionate about observability and system resilience.",
+  "Exploring the bleeding edge of web technologies.",
 ];
 
 const socialLinks = [
