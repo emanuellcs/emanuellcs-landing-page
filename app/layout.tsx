@@ -9,7 +9,8 @@ import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { ParticleBackground } from "@/components/ui/particle-background";
 
 export const metadata: Metadata = {
-  title: "Emanuel Lázaro | Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
+  title:
+    "Emanuel Lázaro | Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
   description:
     "Emanuel Lázaro is a Full-Stack Software Engineer and Data Scientist specializing in TypeScript, Java, Python, and Go. Double Degree student in Software Engineering & Computer Science, building scalable cloud-native systems and Deep Learning models.",
   keywords: [
@@ -32,7 +33,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://emanuellcs.vercel.app",
-    title: "Emanuel Lázaro | Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
+    title:
+      "Emanuel Lázaro | Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
     description:
       "Full-Stack Software Engineer and Data Scientist specializing in TypeScript, Java, Python, and Go. Building scalable cloud-native systems and Deep Learning models.",
     siteName: "Emanuel Lázaro's Portfolio",
@@ -47,7 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emanuel Lázaro | Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
+    title:
+      "Emanuel Lázaro | Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
     description:
       "Full-Stack Software Engineer and Data Scientist specializing in TypeScript, Java, Python, and Go.",
     images: ["https://github.com/emanuellcs.png"],
@@ -74,18 +77,18 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Emanuel Lázaro",
-  "jobTitle": "Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
-  "url": "https://emanuellcs.vercel.app",
-  "image": "https://github.com/emanuellcs.png",
-  "sameAs": [
+  name: "Emanuel Lázaro",
+  jobTitle: "Full-Stack Software Engineer, Data Scientist & AI/ML Engineer",
+  url: "https://emanuellcs.vercel.app",
+  image: "https://github.com/emanuellcs.png",
+  sameAs: [
     "https://github.com/emanuellcs",
     "https://linkedin.com/in/emanuellcs",
     "https://www.kaggle.com/emanuellcs",
     "https://huggingface.co/emanuellcs",
-    "https://gitlab.com/emanuellcs"
+    "https://gitlab.com/emanuellcs",
   ],
-  "knowsAbout": [
+  knowsAbout: [
     "Full-Stack Development",
     "Data Science",
     "AI/ML",
@@ -96,12 +99,12 @@ const jsonLd = {
     "Spring Boot",
     "Next.js",
     "Cloud Native",
-    "Deep Learning"
+    "Deep Learning",
   ],
-  "mainEntityOfPage": {
+  mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://emanuellcs.vercel.app"
-  }
+    "@id": "https://emanuellcs.vercel.app",
+  },
 };
 
 export default function RootLayout({
