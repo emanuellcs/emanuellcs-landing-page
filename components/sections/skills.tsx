@@ -60,6 +60,7 @@ const skillCategories = [
       { name: "HTML5", icon: "🌐" },
       { name: "CSS3", icon: "🎨" },
       { name: "Vite", icon: "⚡" },
+      { name: "WebGL / Three.js", icon: "🧊" },
     ],
   },
   {
@@ -110,6 +111,7 @@ const skillCategories = [
       { name: "C++", icon: "⚙️" },
       { name: "C#", icon: "🟣" },
       { name: "Rust", icon: "🦀" },
+      { name: "WebGPU / WGSL", icon: "⚡" },
     ],
   },
 ];

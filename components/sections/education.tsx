@@ -104,7 +104,7 @@ export function Education() {
                           <GraduationCap size={24} className="text-teal-400" />
                         </div>
                         <div>
-                          <CardTitle className="text-xl mb-1">
+                          <CardTitle as="h4" className="text-xl mb-1">
                             {edu.degree}
                           </CardTitle>
                           <CardDescription className="text-lg font-medium text-teal-400 mb-2">

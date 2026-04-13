@@ -159,10 +159,9 @@ export function Header() {
             {/* Logo */}
             <Link
               href="#hero"
-              className={`text-xl sm:text-2xl font-bold text-teal-400 hover:text-teal-300 transition-colors focus:outline-none rounded-md px-2 py-1 relative z-50 ${
+              className={`text-xl sm:text-2xl font-bold font-mono text-teal-400 hover:text-teal-300 transition-colors focus:outline-none rounded-md px-2 py-1 relative z-50 ${
                 isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
               } md:opacity-100 md:pointer-events-auto`}
-              style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick("#hero", 0);

@@ -62,7 +62,7 @@ export function Footer() {
             <div className="w-16 h-16 rounded-full ring-2 ring-teal-400/40 ring-offset-2 ring-offset-gray-950 overflow-hidden hover:ring-teal-400 transition-all duration-300">
               <Image
                 src="https://github.com/emanuellcs.png"
-                alt="Emanuel Lázaro"
+                alt="Emanuel Lázaro - Portfolio Profile"
                 width={64}
                 height={64}
                 className="object-cover w-full h-full"

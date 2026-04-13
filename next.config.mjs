@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     remotePatterns: [{ protocol: "https", hostname: "github.com" }],
   },
+  transpilePackages: ["geist"],
 };
 
 export default nextConfig;

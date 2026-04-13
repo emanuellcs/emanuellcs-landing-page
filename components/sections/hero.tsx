@@ -18,6 +18,15 @@ const typingStrings = [
   "Spring Boot, NestJS & React practitioner.",
   "Cloud-Native systems builder.",
   "Clean Architecture & DDD advocate.",
+  "WebGL, WebGPU & 3D Graphics enthusiast.",
+  "DevOps & Infrastructure (AWS, Docker, K8s).",
+  "Database specialist (SQL, NoSQL, Redis).",
+  "AI/ML practitioner (PyTorch, TensorFlow).",
+  "Systems & Low-Level enthusiast (Rust, C++, C).",
+  "Building scalable, distributed architectures.",
+  "Crafting high-performance REST & gRPC APIs.",
+  "Passionate about observability and system resilience.",
+  "Exploring the bleeding edge of web technologies.",
 ];
 
 const socialLinks = [
@@ -117,7 +126,7 @@ export function Hero() {
                 <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full ring-4 ring-teal-400/50 ring-offset-4 ring-offset-gray-900 overflow-hidden hover:ring-teal-400 transition-all duration-300">
                   <Image
                     src="https://github.com/emanuellcs.png"
-                    alt="Emanuel Lázaro"
+                    alt="Emanuel Lázaro - Full-Stack Software Engineer, Data Scientist & AI/ML Engineer"
                     width={176}
                     height={176}
                     className="w-full h-full object-cover"
